@@ -45,13 +45,13 @@ class Entity(AnimateSprite):
 
 class Player(Entity):
 
-    def __int__(self):
-        super().__int__("player", 0, 0)
+    def __init__(self):
+        super().__init__("player", 0, 0)
 
 class NPC(Entity): #NPC = PNJ
 
-    def __int__(self, name, nb_points, dialog):
-        super().__int__(name, 0, 0)
+    def __init__(self, name, nb_points, dialog):
+        super().__init__(name, 0, 0)
         self.nb_points = nb_points
         self.dialog = dialog
         self.points = []

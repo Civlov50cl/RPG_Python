@@ -1,21 +1,19 @@
 import pygame
-import pytmx
-import pyscroll
 
 from src.dialog import DialogBox
 from src.player import Player
-from src.map import Map, MapManager
+from src.map import MapManager
 
 
 class Game:
 
-    def __init__(self):
+    def __init__(self, name, x, y):
         # création fenètre du jeu
         self.screen = pygame.display.set_mode((1200, 900))
         pygame.display.set_caption("Nom du jeu")
 
         # generer le joueur
-        self.player = Player()
+        self.player = Player(name, x, y)
         self.map_manager = MapManager(self.screen, self.player)
         self.dialog_box = DialogBox()
 

@@ -7,13 +7,13 @@ from src.map import MapManager
 
 class Game:
 
-    def __init__(self, name, x, y):
+    def __init__(self, name):
         # création fenètre du jeu
         self.screen = pygame.display.set_mode((1200, 900))
         pygame.display.set_caption("Nom du jeu")
 
         # generer le joueur
-        self.player = Player(name, x, y)
+        self.player = Player(name)
         self.map_manager = MapManager(self.screen, self.player)
         self.dialog_box = DialogBox()
 

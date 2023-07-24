@@ -4,7 +4,7 @@ import pygame
 class AnimateSprite(pygame.sprite.Sprite):
 
     def __int__(self, name):
-        super().__int__()
+        super().__init__()
 
         self.sprite_sheet = pygame.image.load(f'../sprites/{name}.png')
         self.animation_index = 0

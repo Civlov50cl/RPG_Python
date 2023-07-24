@@ -47,6 +47,10 @@ class Player(Entity):
 
     def __init__(self):
         super().__init__("player", 0, 0)
+        self.name = "player"
+        self.x = 0
+        self.y = 0
+
 
 class NPC(Entity): #NPC = PNJ
 
